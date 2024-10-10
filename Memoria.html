@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto a tu Memoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+        img {
+            max-width: 100%;
+            max-height: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>INICIEMOS EL RETO A TU MEMORIA</h2>
+        <p>Reconoce la siguiente imagen</p>
+        <img id="questionImage" src="im1.png" alt="Imagen de comida">
+        
+        <h3>Opciones:</h3>
+        <button onclick="checkAnswer('A')">A) EMPANADA DE QUESO</button>
+        <button onclick="checkAnswer('B')">B) TUCUMANAS</button>
+        <button onclick="checkAnswer('C')">C) SALTEÑAS</button>
+        
+        <div class="message" id="message"></div>
+        <button onclick="nextQuestion()">Siguiente Pregunta</button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                image: 'im1.png',
+                correctAnswer: 'C' // Cambia según la respuesta correcta
+            },
+            {
+                image: 'im2.png',
+                correctAnswer: 'B'
+            },
+            {
+                image: 'ruta-de-imagen-3.jpg',
+                correctAnswer: 'C'
+            }
+            // Agrega más preguntas aquí
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadQuestion() {
+            const question = questions[currentQuestionIndex];
+            document.getElementById('questionImage').src = question.image;
+            document.getElementById('message').textContent = '';
+        }
+
+        function checkAnswer(answer) {
+            const messageElement = document.getElementById('message');
+            const question = questions[currentQuestionIndex];
+
+            if (answer === question.correctAnswer) {
+                messageElement.textContent = "¡Correcto! Has reconocido la imagen.";
+            } else {
+                messageElement.textContent = "Incorrecto. Intenta nuevamente.";
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex = (currentQuestionIndex + 1) % questions.length; // Ciclar a la siguiente pregunta
+            loadQuestion();
+        }
+
+        // Cargar la primera pregunta al iniciar
+        window.onload = loadQuestion;
+    </script>
+
+</body>
+</html>

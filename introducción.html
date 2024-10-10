@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB GENEMO - Proyecto</title>
+    <style>
+                 .container2 {
+            background: linear-gradient(to bottom, #15064F);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 20vh;
+        }
+        button {
+            width: 350px;
+            height: 70px;
+             padding: 15px 50px;
+            font-size: 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+             box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+        }
+        button:hover {
+            background-color: #0056b3;
+             box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        }
+        /* Estilos para el encabezado fijo */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 140px;
+            background: linear-gradient(to bottom, #2B0D9F, #320FB8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el encabezado */
+        }
+
+        header img {
+            height: 200px; /* Ajustado para mantener proporción */
+            margin-right: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            
+        }
+
+        /* Estilo general de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 160px; /* Espacio para el encabezado */
+            background-color: #f4f4f4;
+            line-height: 1.6;
+
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px; /* Máximo ancho para pantallas grandes */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        h2 {
+            color: #ff6600;
+            text-align:  center;
+            
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-left: 60px;
+            margin-right: 60px;
+            text-align: justify;
+        }
+
+        .info {
+            margin-bottom: 30px;
+        }
+
+        .info strong {
+            color: #333;
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+                height: auto;
+            }
+
+            header img {
+                margin-bottom: 10px; /* Espacio entre imagen y título */
+            }
+        }
+    </style>
+</head>
+    
+<body>
+
+    <!-- Encabezado fijo -->
+    <header>
+        <img src="logo.png.png" alt="Logo de WEB GENEMO">
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h2>¿Quiénes somos?</h2>
+        <p>La Web “GENEMO” es una página digital multimediática (capaz de incluir audio, video, texto y sus combinaciones) que a partir de los recursos propuestos en su contenido, tiene el propósito de la ESTIMULACIÓN COGNITIVA en el Adulto Mayor.</p>
+        
+        <p>El envejecimiento puede tener efectos negativos en la cognición de una persona, pero a través de estrategias, técnicas y/o recursos adecuados se puede prevenir deterioros profundos que afecten la calidad de vida de los adultos mayores. Al respecto existe basta evidencia teórica que plantea alternativas de recursos para trabajar específicamente en esta población, entre estas se encuentran las estrategias relacionadas a la estimulación cognitiva o motricidad cognitiva en la tercera edad.</p>
+        
+        <p>Según el Instituto Nacional de Estadística (2012) la población de adultos mayores en Bolivia para el año 2030 será de un 11,5% de la población. (Ramírez y Godoy, 2021)</p>
+
+        <p>En tal atención, se considera necesario generar acciones para ayudar a las personas mayores a vivir con calidad, con estrategias y/o recursos que les permita una vida social e intelectualmente activa.</p>
+
+        <p>En el presente sitio web, se ofrecen recursos estratégicos para la estimulación cognitiva en el adulto mayor, como una dimensión importante dentro del enfoque integral de la psicomotricidad.</p>
+
+        <p><strong style="font-size: 25px">"Porque la felicidad del movimiento no es solamente física, la danza neuronal puede ser el néctar de la vejez"</strong><em style="font-size: 15px">(autor: lcp).</em></p>
+    </div>
+     <div class="container2">
+     <button onclick="window.location='genemo%20real.html'">Volver al inicio</button>
+    </div>
+    <script>
+    window.onload = function() {
+        window.scrollTo(0, 0);
+    };
+</script>
+</body>
+</html>
